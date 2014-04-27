@@ -1,4 +1,8 @@
+require_relative './text.rb'
+
 class Takeaway
+
+	include Text
 
 	attr_reader :menu
 
@@ -17,16 +21,53 @@ class Takeaway
 
 	def user_input
 		puts "Type the name of the dish:"
-		@dish = gets.chomp
+		@user_input_dish = gets.chomp
 		puts "Type the quantity:"
 		@quantity = gets.chomp.to_i
 	end
 
-	def place(order)
-		user_input
-		order.add(@dish, @quantity)
-	end	
+	# def place(order)
+	# 	user_input
+	# 	@dish = @menu.map { |dish| dish.name == @user_input_dish }
+	# 	order.add(@dish, @quantity)
+	# end	
 
-	def price(order)
+
+	# def total_price(order)
+	# 	order.price
+	# end
+
+	def confirm_order
+		puts "Thank you for your order! We've sent you a text message to confirm the delivery."
+		send_text
 	end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
