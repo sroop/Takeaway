@@ -10,7 +10,7 @@ describe 'Text' do
 		let(:text) { Text.new }
 
 	it 'tells the time in an hour from now' do
-    	expect(dummy_class.time).to eq("#{Time.now.hour.next}:#{Time.now.min}")
+    	expect(dummy_class.time).to eq("#{(Time.now + 1*60*60).strftime('%H:%M')}")
   	end
 	
 end
