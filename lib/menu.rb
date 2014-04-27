@@ -14,4 +14,13 @@ class Menu
 		@menu << dish
 	end
 
+	def view_menu
+		list = @menu.map do |dish|
+			"#{dish.name} £#{dish.price}"
+		end.join("\n")
+		puts "Menu:"
+		puts "#{list}"
+		list
+	end
+
 end
