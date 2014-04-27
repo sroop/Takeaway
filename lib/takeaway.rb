@@ -19,11 +19,14 @@ class Takeaway
 		puts "Type the name of the dish:"
 		@dish = gets.chomp
 		puts "Type the quantity:"
-		@quantity = gets.chomp
+		@quantity = gets.chomp.to_i
 	end
 
 	def place(order)
 		user_input
 		order.add(@dish, @quantity)
 	end	
+
+	def price(order)
+	end
 end

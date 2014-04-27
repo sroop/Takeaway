@@ -7,7 +7,7 @@ describe 'Takeaway' do
 	let(:sushi_menu) {double :menu, view_menu: [dish_1, dish_2]}
 	let(:donburi_menu) {double :menu, view_menu: [dish_3]}
 	let(:youmesushi) { Takeaway.new([sushi_menu]) }
-	let(:order) { double :order, add: :something}
+	let(:order) { double :order, add: dish_1, price: 11}
 	
 	context 'Interacting with the Menu class:' do
 
@@ -30,20 +30,18 @@ describe 'Takeaway' do
 
 		it 'User is asked to input the name and quantity of a dish' do
 			youmesushi.stub(:gets).and_return("Salmon Sashimi", "3")
-			expect(youmesushi.user_input).to eq("3")
+			expect(youmesushi.user_input).to eq(3)
 		end
 
 		it 'User input is placed into an order' do
-			youmesushi.stub(:gets).and_return("Salmon Sashimi", "3")
-      		youmesushi.place(order)
+      		expect(youmesushi.place(order)).to eq(dish_1)
 		end
 
-		
-	end
+		# it 'Calculates the total price of the order' do
+		# 	youmesushi.price(order)
+		# end
 
-	# context 'The bill:' do
-		
-	# end
+	end
 
 	# context 'Confirmation:' do
 		

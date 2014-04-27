@@ -12,6 +12,7 @@ attr_reader :dishes
 			@dishes << dish
 			number += 1
 		end
+		@dishes
 	end
 
 	def price
