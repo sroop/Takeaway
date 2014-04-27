@@ -12,6 +12,7 @@ class Menu
 
 	def add_dish(dish)
 		@menu << dish
+		@menu
 	end
 
 	def view_menu
@@ -21,6 +22,7 @@ class Menu
 	end
 
 	def print_menu
+		view_menu
 		puts "Menu:"
 		puts "#{@list}"
 	end
