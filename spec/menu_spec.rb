@@ -17,7 +17,7 @@ describe "Menu" do
 		expect(menu.menu).to eq([dish_1, dish_2, dish_3])
 	end
 
-	it 'can nicely format and print out the list of dishes' do
+	it 'can format the list of dishes to show just name and price' do
 		expect(menu.view_menu).to eq("Salmon Sashimi £11\nTuna Sashimi £11")
 	end
 

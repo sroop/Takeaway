@@ -15,12 +15,14 @@ class Menu
 	end
 
 	def view_menu
-		list = @menu.map do |dish|
+		@list = @menu.map do |dish|
 			"#{dish.name} £#{dish.price}"
-		end.join("\n")
+		end.join("\n")	
+	end
+
+	def print_menu
 		puts "Menu:"
-		puts "#{list}"
-		list
+		puts "#{@list}"
 	end
 
 end
