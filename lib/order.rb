@@ -15,7 +15,19 @@ attr_reader :dishes
 	end
 
 	def price
-		@dishes.inject(0) { |accu, dish| accu + dish.price }
+		@price = @dishes.inject(0) { |accu, dish| accu + dish.price }
+	end
+
+	def view_order
+		list = @dishes.map do |dish|
+			"#{dish.name} £#{dish.price}"
+		end.join("\n")
+		puts "Your Order"
+		puts "#{list}"
+		puts "-------------"
+		puts "Price: £#{@price}"
+		puts "-------------"
+		list
 	end
 
 end
