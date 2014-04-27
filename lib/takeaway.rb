@@ -15,4 +15,15 @@ class Takeaway
 		menu.view_menu
 	end
 
+	def user_input
+		puts "Type the name of the dish:"
+		@dish = gets.chomp
+		puts "Type the quantity:"
+		@quantity = gets.chomp
+	end
+
+	def place(order)
+		user_input
+		order.add(@dish, @quantity)
+	end	
 end
