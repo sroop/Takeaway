@@ -11,8 +11,8 @@ class Takeaway
 		@menu
 	end
 
-	# def show(menu)
-
-	# end
+	def view(menu)
+		menu.view_menu
+	end
 
 end
