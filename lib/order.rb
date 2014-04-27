@@ -30,7 +30,6 @@ attr_reader :dishes
 		puts "-------------"
 		puts "Price: £#{@price}"
 		puts "-------------"
-		list
 	end
 
 end
