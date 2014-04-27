@@ -26,7 +26,7 @@ describe 'Order' do
 		expect(order.price).to eq(31)
 	end
 
-	it 'can nicely format and print out the list of dishes and total price' do
+	it 'can format the list of dishes to show just name and price' do
 		order.add(dish_1)
 		order.add(dish_2, 2)
 		expect(order.view_order).to eq("Salmon Sashimi £11\nTuna Sashimi £10\nTuna Sashimi £10")

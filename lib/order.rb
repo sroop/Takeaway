@@ -19,11 +19,14 @@ attr_reader :dishes
 	end
 
 	def view_order
-		list = @dishes.map do |dish|
+		@list = @dishes.map do |dish|
 			"#{dish.name} £#{dish.price}"
 		end.join("\n")
+	end
+
+	def print_receipt
 		puts "Your Order"
-		puts "#{list}"
+		puts "#{@list}"
 		puts "-------------"
 		puts "Price: £#{@price}"
 		puts "-------------"
