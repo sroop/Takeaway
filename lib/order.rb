@@ -14,4 +14,8 @@ attr_reader :dishes
 		end
 	end
 
+	def price
+		@dishes.inject(0) { |accu, dish| accu + dish.price }
+	end
+
 end
