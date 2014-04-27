@@ -6,8 +6,12 @@ attr_reader :dishes
 		@dishes = []
 	end
 
-	def add(dish)
-		@dishes << dish
+	def add(dish, quantity = 1)
+		number = 1
+		while number <= quantity
+			@dishes << dish
+			number += 1
+		end
 	end
 
 end

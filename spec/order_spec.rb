@@ -14,4 +14,9 @@ describe 'Order' do
 		expect(order.dishes).to eq([dish])
 	end
 
+	it 'can add 3 of the same dishes' do
+		order.add(dish, 3)
+		expect(order.dishes).to eq([dish, dish, dish])
+	end
+
 end
