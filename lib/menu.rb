@@ -7,7 +7,11 @@ class Menu
 	end
 
 	def has_dishes?
-		@menu
+		!@menu.empty?
+	end
+
+	def add_dish(dish)
+		@menu << dish
 	end
 
 end
